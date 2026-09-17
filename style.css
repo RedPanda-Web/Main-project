@@ -1,0 +1,509 @@
+:root {
+    --cream: #F2EBDA;
+    --gold: #FFD78C;
+    --green: #1F2920;
+    --grey: #BFB2A6;
+    --black: #1A1712;
+}
+/* ---------------------
+    GLOBAL: Fonts
+   --------------------- */
+.island-moments-regular {
+  font-family: "Island Moments", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.jaldi-regular {
+  font-family: "Jaldi", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.jacques-francois-regular {
+  font-family: "Jacques Francois", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* --------------------
+    GLOBAL: Base styles
+   -------------------- */
+body {
+    background-color: var(--green);
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Jaldi', sans-serif;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* GLOBAL: Header and navigation */
+header {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1.25rem 2rem;
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-left: auto;
+}
+.nav a {
+    color: var(--cream);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    padding: 0.6rem 0.25rem;
+}
+
+/* GLOBAL: Buttons */
+.button {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.9rem 1.6rem;
+    border-radius: 2px;
+}
+#collectionButton {
+    background-color: var(--gold);
+    color: var(--green);
+    border: none;
+}
+#inquireButton {
+    background-color: transparent;
+    color: var(--cream);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+}
+.button-group {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+.logo_img {
+    display: block;
+    height: 2.75rem;
+    width: auto;
+}
+
+/* HOME PAGE */
+#banner {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+.front {
+    position: relative;
+    z-index: 1;
+    max-width: 620px;
+    padding: 8vh 0 0 4rem;
+    color: var(--cream);
+}
+.eyebrow {
+    font-family: 'Space Mono', monospace;
+    color: var(--gold);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    margin: 0 0 0.75rem 0;
+}
+.front h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 4.5rem;
+    line-height: 1.05;
+    margin: 0;
+}
+.art-title {
+    font-family: 'Island Moments', cursive;
+    color: var(--gold);
+    font-size: 5.5rem;
+    line-height: 1;
+    margin: -1rem 0 1rem 2.5rem;
+}
+.credit {
+    font-family: 'Space Mono', monospace;
+    color: var(--gold);
+    font-size: 0.85rem;
+    margin: 0 0 2rem 0;
+}
+#art {
+    color: var(--gold);
+}
+
+/* HOME PAGE: A closer look gallery */
+.acl {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 25vh;
+    color: var(--cream);
+    text-align: center;
+}
+.acl h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0 0 1.5rem;
+}
+.acl-gallery {
+    display: flex;
+    gap: 4%;
+}
+.acl-gallery > div {
+    flex: 1;
+}
+
+/* GLOBAL: Artwork image defaults */
+.collection-img {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    border-color: var(--cream);
+    border-width: 5px;
+    border-style: solid;
+}
+
+/* GLOBAL: Footer */
+.footer{
+    padding-top: 2rem;
+    color: var(--cream);
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem 0.75rem;
+    backdrop-filter: blur(10px);
+}
+.footer-left p {
+    margin: 0;
+    font-size: 1.05rem;
+}
+.footer-right p {
+    margin: 0;
+}
+.footer-right {
+    display: flex;
+    align-items: center;
+}
+.instagram {
+    margin-left: 1rem;
+}
+hr {
+    margin: 0;
+}
+
+/* SHARED: Page headings and content width */
+.inquire-btn {
+    text-decoration: underline;
+    text-decoration-color: var(--gold);
+    color: var(--cream);
+}
+.inquire,
+.collections-page {
+    width: min(88%, 1100px);
+    display: block;
+    margin: 3rem auto 0;
+    color: var(--cream);
+}
+.inquire h2,
+.inquire h1,
+.the-collection,
+.collections-page h1{
+    color: var(--cream);
+    text-align: center;
+}
+.inquire h2,
+.collections-page h2 {
+    font-family: 'Jaldi', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    margin: 0;
+    text-transform: uppercase;
+}
+.inquire h1,
+.collections-page h1 {
+    font-family: 'Jacques Francois', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 400;
+    margin: 0 0 3rem;
+}
+
+/* COLLECTIONS PAGE: Collection rows */
+.collection-list {
+    border-top: 1px solid rgba(242, 235, 218, 0.6);
+}
+.collection {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 9fr);
+    gap: 3rem;
+    align-items: center;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid rgba(242, 235, 218, 0.6);
+}
+.collection-left {
+    min-width: 0;
+    display: flex;
+}
+.collection-img {
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    object-fit: cover;
+    display: block;
+    border: 3px solid var(--cream);
+    border-radius: 2px;
+}
+.collection-right h2 {
+    font-family: 'Jacques Francois', serif;
+    font-size: 2.1rem;
+    font-weight: 400;
+    margin: 0 0 0.75rem;
+}
+.collection-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.lot-label {
+    color: var(--gold);
+    font-family: 'Jacques Francois', serif;
+    flex-shrink: 0;
+    font-size: 2.1rem;
+    font-weight: 400;
+}
+.collection-right {
+    min-width: 0;
+}
+.collection-right p {
+    width: 100%;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin: 0 0 0.75rem;
+}
+.collection-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+.availability {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.availability-dot {
+    width: 0.65rem;
+    height: 0.65rem;
+    border-radius: 50%;
+    background-color: #6fa66d;
+}
+.collection-inquire {
+    color: var(--cream);
+    padding: 0.65rem 1.4rem;
+    text-decoration: underline;
+    text-decoration-color: var(--gold);
+    font-size: 1.5rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    header {
+        padding: 1rem;
+    }
+    .nav {
+        gap: 0.75rem;
+    }
+    .inquire,
+    .collections-page {
+        margin-top: 2rem;
+    }
+    .inquire h1,
+    .collections-page h1 {
+        margin-bottom: 2rem;
+    }
+    .collection {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        padding: 2rem 0;
+    }
+    .collection-img {
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 16 / 10;
+    }
+    .collection-right h2 {
+        font-size: 1.8rem;
+    }
+    .collection-title {
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    .collection-right p {
+        font-size: 1.1rem;
+    }
+}
+
+/* ABOUT PAGE: Studio statement */
+.about-page {
+    width: min(88%, 1000px);
+    margin: 3rem auto 0;
+}
+.about-heading {
+    color: var(--cream);
+    text-align: center;
+}
+.about-heading h3 {
+    font-family: 'Jaldi', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    margin: 0;
+    text-transform: uppercase;
+}
+.about-heading h1 {
+    font-family: 'Jacques Francois', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 400;
+    margin: 0 0 3rem;
+}
+.studio-box {
+    background-color: var(--cream);
+    box-sizing: border-box;
+    color: var(--black);
+    min-height: 20rem;
+    padding: 2.5rem;
+    width: 100%;
+}
+.studio-box h2 {
+    font-family: 'Jacques Francois', serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0 0 1rem;
+}
+.studio-box p {
+    font-family: 'Jaldi', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0 0 1rem;
+}
+.artist-statement {
+    font-family: 'Jacques Francois', serif !important;
+    font-size: 2rem !important;
+    line-height: 1.4 !important;
+}
+.studio-box hr {
+    border: 0;
+    border-top: 1px solid var(--black);
+    margin: 2rem 0 1.5rem;
+}
+.art-references p {
+    margin-bottom: 0.5rem;
+}
+.art-references a {
+    color: var(--black);
+    font-weight: 700;
+}
+
+/* INQUIRY PAGE: Form */
+.inquire-form {
+    background-color: var(--cream);
+    width: 40vw;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 2.5rem 3rem 3rem;
+    color: var(--black);
+    box-sizing: border-box;
+}
+.inquire-form h1 {
+    color: var(--black);
+    font-family: 'Jacques Francois', serif;
+    font-size: clamp(1.8rem, 3vw, 2.75rem);
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+}
+.inquire-intro {
+    color: var(--black);
+    font-size: 1.1rem;
+    margin: 0.75rem 0 2rem;
+    text-align: center;
+}
+.inquire-form form {
+    display: flex;
+    flex-direction: column;
+}
+.inquire-form label {
+    color: var(--black);
+    font-size: 1.1rem;
+    margin: 1rem 0 0.3rem;
+}
+.inquire-form input,
+.inquire-form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid var(--black);
+    border-radius: 0;
+    color: var(--black);
+    font: inherit;
+    padding: 0.45rem 0;
+    outline: none;
+}
+.inquire-form input {
+    background-color: transparent;
+}
+.inquire-form textarea {
+    background-color: #D7D0C0;
+    border: 0;
+    min-height: 7rem;
+    padding: 0.75rem;
+    resize: vertical;
+}
+.inquire-form textarea::placeholder {
+    color: var(--black);
+    opacity: 1;
+}
+.inquire-form button {
+    align-self: center;
+    background-color: var(--black);
+    border: 0;
+    color: var(--cream);
+    cursor: pointer;
+    font: inherit;
+    margin-top: 2rem;
+    padding: 0.7rem 1.5rem;
+}
+
+/* ABOUT PAGE: Responsive studio statement */
+@media (max-width: 600px) {
+    .about-page {
+        margin-top: 2rem;
+    }
+    .about-heading h1 {
+        margin-bottom: 2rem;
+    }
+    .studio-box {
+        min-height: 16rem;
+        padding: 1.5rem;
+    }
+    .studio-box h2 {
+        font-size: 3rem;
+    }
+    .artist-statement {
+        font-size: 1.7rem !important;
+    }
+}

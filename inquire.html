@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inquiry</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Jacques+Francois&family=Jaldi:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Aurum Logo" class="logo_img"></a>
+            </div>
+            <div class = "nav">
+                <a href="collections.html">Collections</a>
+                <a href="Inquire.html">Inquire</a>
+                <a href="about.html">About</a>
+            </div>
+        </header>
+        <main class="inquire">
+            <div class="inquire-form">
+                <h1>Inquire About a Piece</h1>
+                <p class="inquire-intro">What piece caught your eye? I’ll handle the rest.</p>
+                <form action="submit_inquiry.php" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="piece">Piece</label>
+                    <input type="text" id="piece" name="piece" required>
+
+                    <label for="extra">Extra</label>
+                    <textarea id="extra" name="extra" rows="5" placeholder="Feel free to leave any extra details in this box..."></textarea>
+
+                    <button type="submit">Send Inquiry</button>
+                </form>
+            </div>
+        </main>
+        <div class="footer">
+            <hr class="exclude">
+            <div class="footer-content">
+                <div class = "footer-left">
+                    <p>© 2026 Flynn Davidson</p>
+                </div>
+                <div class = "footer-right">
+                    <div class = "email">
+                        <p>Email: flynn.davidson@example.com</p>
+                    </div>
+                    <div class = "instagram">
+                        <p>Instagram: @aurum_art</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
